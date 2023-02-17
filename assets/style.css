@@ -94,7 +94,7 @@ body {margin: 0; min-height: 100vh; font-family: 'Poppins', sans-serif; font-siz
 .faq:first-child {border-radius: 20px 20px 0 0;}
 .faq:not(:last-child) {border-bottom: 4px solid var(--bl1);}
 .faq:last-child {border-radius: 0 0 20px 20px;}
-.faq-q {background: var(--bl2); padding: 10px 20px; color: var(--bl5); font-size: 1.5em;}
+.faq-q {background: var(--bl2); padding: 10px 20px; color: var(--bl5); font-size: 1.5em; cursor: pointer;}
 .faq-a {padding: 0px 20px; color: var(--bl4); font-size: 1.4em;}
 .faq-a a {color: var(--re4);}
 
