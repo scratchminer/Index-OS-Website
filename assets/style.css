@@ -1,0 +1,159 @@
+/* Site Colors */
+:root {
+--re1: #361616; --re2: #C63C3C; --re3: #F35555; --re4: #ffd2d2; --re5: #FFF1F1;
+--bl1: #132846; --bl2: #214B88; --bl3: #55A5F3; --bl4: #BDD1FF; --bl5: #E8EFFF;}
+
+/* Defining some global stuff */
+* {box-sizing: border-box;}
+body {margin: 0; min-height: 100vh; font-family: 'Poppins', sans-serif; font-size: 10px; background: var(--bl1);}
+
+.loading {position: fixed; width: 100vw; height: 100vh; z-index: 999; display: flex; align-items: center; justify-content: center; background: var(--bl1);}
+.load-text {font-size: 4em; color: var(--bl4);}
+
+/* Header */
+.header {background: var(--bl1);}
+.header-bar {padding: 5px 15px; display: flex; align-items: center; justify-content: space-between; background: var(--bl5); width: 100%; clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); z-index: 1; margin-bottom: -10px;}
+.header-logo {width: 150px; transform: rotate(10deg); margin-right: 30px;}
+
+/* Site Navigation */
+.nav {display: none;}
+.nav-items {display: flex; flex-direction: column; background: var(--bl4); border-radius: 50px; padding: 20px;}
+.nav-item {color: var(--bl1); transition: all 0.15s cubic-bezier(.05,.69,.32,1.59); cursor: pointer; font-size: 2.5em; text-align: center; text-decoration: none;}
+.nav-item:hover {color: var(--bl2); transform: scale(1.1);}
+.nav-item:active {transform: scale(0.9);}
+.dl.nav-item {background: var(--bl2); color: var(--bl5); border: 4px solid var(--bl1); padding: 10px 20px; border-radius: 50px; margin-top: 15px; transition: all 0.15s cubic-bezier(.05,.69,.32,1.59); cursor: pointer;}
+.nav-btn {width: 40px; height: 40px; background: var(--re2); color: var(--re5); position: absolute; right: 15px; top: 25px; transform: rotate(-5deg); display: flex; align-items: center; justify-content: center; font-size: 25px; z-index: 100; transition: all 0.15s cubic-bezier(.05,.69,.32,1.09); cursor: pointer;}
+.nav-btn:hover {transform: scale(1.1) rotate(5deg);}
+.nav-btn:active {transform: scale(0.9) rotate(5deg); background: var(--re4);}
+
+/* What happens when you open the nav? */
+.nav-open {overflow: hidden;}
+.nav-open .header {height: 100vh; transition: all 0.25s; z-index: 99;}
+.nav-open .header-bar {height: 90vh; position: fixed; z-index: 99; justify-content: center;}
+.nav-open .header-logo {opacity: 0; transition: all 0.25s;}
+.nav-open .nav {display: flex; flex-direction: column; position: fixed; transition: all 0.25s;}
+.nav-open .dl.nav-item:hover {transform: translateY(-3px); transition: all 0.25s;}
+.nav-open .dl.nav-item:active {transform: translateY(2px); transition: all 0.25s;}
+.nav-open .nav-btn {top: 80vh; position: fixed;}
+
+/* Defining some stuff for the 'content' boxes */
+.content {display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;}
+.b.content {border-bottom: 15px solid var(--bl2);}
+.r.content {border-bottom: 15px solid var(--re2);}
+
+.title {align-items: flex-start; background: var(--bl1);}
+.title-head {font-size: 4em; color: var(--re4);}
+.title-text {font-size: 1.5em; margin: 0; color: var(--bl4);}
+.title-text a {color: var(--re4);}
+
+/* The "Hero" box at the top of the front page */
+.hero {background: var(--bl1);}
+.hero-head {line-height: 1; font-size: 2.5em; text-align: center; color: var(--bl3);}
+.hero-head span {display: inline-block; color: var(--re4); font-size: 1.25em; transform: skewY(-3deg);}
+.hero-image {content: url('hero-vert.png'); width: 70vw; margin: 10px 0;}
+.hero-text {line-height: 1.3; font-size: 1.5em; text-align: center; color: var(--bl4);}
+
+/* The bit that explains all the features */
+.features {background: var(--re5);}
+.feature-head {font-size: 2.5em; text-align: center; color: var(--bl2); margin: 0; margin-bottom: 10px; transform: skewY(2deg);}
+.more-features .feature-head {margin-top: 15px;}
+.feature-list {display: flex; flex-direction: column;}
+.feature {display: inline-grid; grid-template-columns: 50px 1fr; grid-template-rows: fit-content 1fr; padding: 20px 15px;}
+.feature:nth-child(odd), .more-features {background: var(--re4);}
+.feature-icon {grid-column-start: 1; grid-column-end: 2; grid-row-start: 1; grid-row-end: 1; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 3px solid var(--bl2); color: var(--bl2); font-size: 20px; margin: 0;margin-right: 10px;}
+.feature-title {grid-column-start: 2; grid-column-end: 2; grid-row-start: 1; grid-row-end: 1; margin: 0; text-align: left; transform: skewY(-3deg); font-size: 2em; white-space: nowrap; text-decoration: underline; color: var(--re2); width: fit-content;}
+.feature-text {grid-column-start: 2; grid-column-end: 2; grid-row-start: 2; grid-row-end: 2; margin: 0; margin-top: -5px; text-align: left; font-size: 1.2em; color: var(--bl1);}
+.more-features .feature-text {margin: 20px; margin-top: 0; text-align: center;}
+
+/* Call to action box - go download it!! */
+.cta {background: var(--bl5);}
+.cta-head {margin: 0; color: var(--re2); font-size: 2.8em; text-align: center; line-height: 1.2;}
+.cta-button {margin: 30px 0 20px 0; background: var(--bl2); color: var(--bl5); border: 3px solid var(--bl1); box-shadow: 0 5px 0 3px var(--bl1); font-size: 2.2em; padding: 10px 30px; text-align: center; border-radius: 50px; cursor: pointer; transition: all 0.15s cubic-bezier(.05,.69,.32,1.59); text-decoration: none;}
+.cta-button:hover {transform: translateY(-4px); box-shadow: 0 9px 0 2px var(--bl1);}
+.cta-button:active {transform: translateY(7px); box-shadow: 0 -1px 0 3px var(--bl1);}
+.cta-extra {margin: 0; font-size: 1.4em; color: var(--bl2);}
+
+.faqs {background: var(--bl4);}
+.faq {background: var(--bl1); width: 100%; overflow: hidden;}
+.faq:first-child {border-radius: 20px 20px 0 0;}
+.faq:not(:last-child) {border-bottom: 4px solid var(--bl1);}
+.faq:last-child {border-radius: 0 0 20px 20px;}
+.faq-q {background: var(--bl2); padding: 10px 20px; color: var(--bl5); font-size: 1.5em;}
+.faq-a {padding: 0px 20px; color: var(--bl4); font-size: 1.4em;}
+.faq-a a {color: var(--re4);}
+
+.nextsteps {background: var(--re5);}
+.nextsteps .title-head {color: var(--bl2);}
+.nextsteps .title-text {color: var(--re1);}
+
+/* Footer!! */
+.footer {background: var(--bl1);}
+.footer-logo {width: 250px; margin: 30px 0;}
+.footer-icon {color: var(--bl4); font-size: 4em; cursor: pointer; transition: all 0.10s;}
+.footer-icon:hover {color: var(--bl5); transform: translateY(-3px);}
+.footer-icon:active {transform: translateY(0px);}
+.footer-text {color: var(--bl4); text-align: center; font-size: 1em;}
+.footer-text a {color: var(--re4); text-decoration: underline; cursor: pointer;}
+.footer-text span {font-size: 1.5em;}
+
+/* Desktoptimization!! */
+@media only screen and (min-width: 400px) {
+    body {font-size: 11px;}
+    .header-logo {width: 200px;}
+    .nav-btn {width: 50px; height: 50px; font-size: 30px;}
+    .footer-logo {width: 280px; margin: 35px 0;}
+}
+@media only screen and (min-width: 500px) {
+    body {font-size: 12px;}
+}
+@media only screen and (min-width: 600px) {
+    body {font-size: 14px;}
+    .feature {grid-template-columns: 80px 1fr;}
+    .feature-icon {width: 60px; height: 60px; border: 4px solid var(--bl2); font-size: 30px; margin: 0; margin-right: 20px;}
+    .header-logo {width: 230px;}
+    .nav-btn {width: 60px; height: 60px; font-size: 35px;}
+    .footer-logo {width: 350px;}
+}
+@media only screen and (min-width: 700px) {
+    .content {padding: 30px;}
+    body {font-size: 15px;}
+    .hero-image {content: url('hero-hori.png');}
+}
+@media only screen and (min-width: 800px) {
+    .content {padding: 40px;}
+    body {font-size: 16px;}
+    .header-bar {padding: 10px 10px; justify-content: center;}
+    .header-logo {width: 230px;}
+    .nav-btn {display: none;}
+    .nav {display: flex; flex-grow: 1; align-items: center; justify-content: flex-end;}
+    .nav-items {flex-direction: row; background: var(--bl4); flex-grow: 1; padding: 5px 10px; justify-content: space-around; border-radius: 50px; max-width: 550px;}
+    .nav-item {color: var(--bl1); transition: all 0.15s cubic-bezier(.05,.69,.32,1.59); cursor: pointer; font-size: 1em;}
+    .nav-item:hover {color: var(--bl2); transform: scale(1.1);}
+    .nav-item:active {transform: scale(0.9);}
+    .current.nav-item {color: var(--bl2);}
+    .dl.nav-item {background: var(--bl2); color: var(--bl5); border: 2px solid var(--bl1); padding: 10px 20px; border-radius: 50px; margin-top: 0; margin-left: 15px; transition: all 0.15s cubic-bezier(.05,.69,.32,1.59); cursor: pointer;}
+    .dl.nav-item:hover {transform: translateY(-3px);}
+    .dl.nav-item:active {transform: translateY(2px);}
+}
+@media only screen and (min-width: 900px) {
+    .content {padding: 50px;}
+    body {font-size: 18px;}
+    .header-bar {padding: 10px 20px;}
+    .feature {grid-template-columns: 110px 1fr;}
+    .feature-icon {width: 80px; height: 80px; border: 5px solid var(--bl2); font-size: 40px; margin: 0; margin-right: 30px;}
+    .feature {padding: 40px 40px;}
+    .footer-logo {width: 400px;}
+}
+@media only screen and (min-width: 1000px) {
+    .content {padding: 60px;}
+    body {font-size: 20px;}
+}
+@media only screen and (min-width: 1100px) {
+    .content {padding: 70px;}
+    body {font-size: 21px;}
+    .footer-logo {width: 600px;}
+}
+@media only screen and (min-width: 1200px) {
+    .content {padding: 80px;}
+    body {font-size: 22px;}
+}

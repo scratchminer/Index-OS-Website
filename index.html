@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<!-- Defining some stuff -->
+<title>Index OS - A Custom Launcher for Playdate!</title>
+<link rel="stylesheet" href="assets/style.css">
+<!-- Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#132846" media="(prefers-color-scheme: dark)"/>
+<meta name="theme-color" content="#E8EFFF" media="(prefers-color-scheme: light)"/>
+<meta property="og:title" content="Index OS - A Custom Launcher for Playdate!">
+<meta property="og:description" content="Introducing Index OS, the world-class custom Launcher app built just for Playdate.">
+<meta property="og:image" content="assets/opengraph.png">
+<!-- Loading in scripts -->
+<script src="assets/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/b793926a64.js" crossorigin="anonymous"></script>
+<!-- Handy dandy Google-fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,600;0,800;1,600;1,800&display=swap" rel="stylesheet">
+
+<body onload="load()">
+    <div class="loading">
+        <p class="load-text"><i class="fa-solid fa-spinner fa-spin"></i>&nbsp;&nbsp;Loading...</p>
+    </div>
+    <div class="header">
+        <a class="nav-btn" onclick="togglenav()"><i class="fa-solid fa-bars-staggered"></i></a>
+        <div class="header-bar">
+            <a href="index.html"><img class="header-logo" src="assets/logo-dark.svg" /></a>
+            <div class="nav">
+                <div class="nav-items">
+                    <a class="nav-item" href="index.html#features"><i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Features</a>
+                    <a class="nav-item" href="faqs.html"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;FAQs</a>
+                    <a class="nav-item" href="install.html"><i class="fa-solid fa-screwdriver"></i>&nbsp;&nbsp;Installation</a>
+                </div>
+                <a class="nav-item dl" href="download.html"><i class="fa-solid fa-file-arrow-down">&nbsp;&nbsp;</i>Download Now<i>!!</i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="b hero content">
+        <h1 class="hero-head">It's like the Launcher you already know, but...<span>better<i>!!</i></span></h1>
+        <img class="hero-image" />
+        <p class="hero-text">Introducing Index OS, the world-class custom Launcher app built just for Playdate.<br><br>We built Index to wring as much sheer customization, personality, and FUN as you can out of a custom Playdate Launcher!</p>
+    </div>
+    <div class="b features content" id="features">
+        <h1 class="feature-head">Why choose Index?</h1>
+        <div class="feature-list">
+            <div class="feature">
+                <p class="feature-icon"><i class="fa-solid fa-folder-open"></i></p>
+                <h2 class="feature-title">Custom folders!</h2>
+                <p class="feature-text">Group your games together, any way you want 'em. Create and customize folders straight from the device, no extra setup or outside tools necessary.</p>
+            </div>
+            <div class="feature">
+                <p class="feature-icon"><i class="fa-solid fa-arrow-up-wide-short"></i></p>
+                <h2 class="feature-title">Sorting? Easy!</h2>
+                <p class="feature-text">Choose between a variety of sorting presets from the slide menu, or pick the games up yourself and sort 'em any way you want!</p>
+            </div>
+            <div class="feature">
+                <p class="feature-icon"><i class="fa-solid fa-truck-fast"></i></p>
+                <h2 class="feature-title">Just as speedy.</h2>
+                <p class="feature-text">Ringing in at just <span style="font-size: 0.8em; color: var(--bl2);">[filesize goes here]</span>, Index keeps the core M.O. of the stock Launcher at heart - get the player (that's you!) into a game, and <i>fast.</i></p>
+            </div>
+            <div class="feature">
+                <p class="feature-icon"><i class="fa-solid fa-backward"></i></p>
+                <h2 class="feature-title">Change your mind?</h2>
+                <p class="feature-text">Getting back to the stock Launcher is easy as pie - you can hop back to it right on your device, and make it your default again as easily as you set it up.</p>
+            </div>
+        </div>
+        <div class="more-features">
+            <h1 class="feature-head">Wait, there's more!</h1>
+            <p class="feature-text">• View detailed game info in a snap<br>• Customize a wide variety of options<br>• Personalization is as easy as sideloading a game<br>• List view lets you browse all your games, lightning-fast<br>• Hop between folders easier than ever<br>• View detailed game info in a snap</p>
+        </div>
+    </div>
+    <div class="r cta content">
+        <h1 class="cta-head">So what are you waiting for?</h1>
+        <a class="cta-button" href="download.html"><i class="fa-solid fa-file-arrow-down"></i>&nbsp;&nbsp;Download Now<i>!!</i></a>
+        <p class="cta-extra">Index OS.pdx - 88.8mb</p>
+    </div>
+
+    <div class="footer content">
+        <a href="index.html"><img class="footer-logo" src="assets/logo-light.svg" /></a>
+        <a class="footer-icon" href="replace.html"><i class="fa-brands fa-github"></i></a>
+        <p class="footer-text"><span>Thanks for using Index OS! ©2023</span><br><br>This launcher was coded and developed by <a href="https://github.com/scratchminer">scratchminer</a>, and the assets and site design were <a href="https://stuffbyrae.neocities.org">made by rae</a>.<br><br>The game featured in the photos, Dungeons & Doggos, was made by PizzaFuel - <a href="replace.html">go check it out!</a><br><br>Special thanks to Guv_Bubbs, and everyone else in the Playdate Squad Discord server who cheered us along during development!<br><br><a href="https://play.date">Playdate</a> is a registered trademark of <a href="https://panic.com">Panic Inc.</a> We aren't affiliated with or endorsed by Panic in any way.</p>
+    </div>
+</body>
+</html>
