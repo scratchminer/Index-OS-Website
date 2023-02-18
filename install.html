@@ -27,12 +27,12 @@
     <div class="header">
         <a class="nav-btn" onclick="togglenav()"><i class="fa-solid fa-bars-staggered"></i></a>
         <div class="header-bar">
-            <a href="index.html"><img class="header-logo" src="assets/logo-dark.svg" /></a>
+            <a href=""><img class="header-logo" src="assets/logo-dark.svg" /></a>
             <div class="nav">
                 <div class="nav-items">
-                    <a class="nav-item" href="index.html#features"><i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Features</a>
+                    <a class="nav-item" href="#features"><i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Features</a>
                     <a class="nav-item" href="faqs.html"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;FAQs</a>
-                    <a class="nav-item" href="install.html"><i class="fa-solid fa-screwdriver"></i>&nbsp;&nbsp;Installation</a>
+                    <a class="nav-item current" href="install.html"><i class="fa-solid fa-screwdriver"></i>&nbsp;&nbsp;Installation</a>
                 </div>
                 <a class="nav-item dl" href="download.html"><i class="fa-solid fa-file-arrow-down">&nbsp;&nbsp;</i>Download Now<i>!!</i></a>
             </div>
@@ -41,21 +41,34 @@
     
     <div class="b darkblue content">
         <h1 class="head">Installation</h1>
-        <p class="text">How to unlock your Playdate, access that sweet sweet system partition, and swap out your Launcher with Index.</p>
-    </div>
-
-    <div class="r cta lightblue content">
-        <h1 class="head">Preparation</h1>
-        <p class="text">Here's a list of things you'll need before we begin:<br>• A Playdate console<br>• The Index OS .pdx file <a href="download.html">(Get it if you haven't already!)</a></p>
+        <p class="text">The full guide on how to get Index OS up and running on your Playdate! It's as easy as 1, 2, 3.</p>
     </div>
 
     <div class="b cta lightblue content">
-        <h1 class="head">Step 1</h1>
-        <p class="text">Blah blah lorem ipsum whatever. Please remind me to finish this later.</p>
+        <h1 class="head">On the Simulator</h1>
+        <p class="text">Here's a list of things you'll need before we begin:<br>• The Playdate Simulator (available at <a href="https://dev.play.date">dev.play.date</a>!)<br>• The Index OS .pdx file (<a href="download.html">Get it if you haven't already!</a>)</p>
+        <hr />
+        <h1 class="head">Dropping it in</h1>
+        <p class="text">With the Index OS file in hand, navigate to path/to/PlaydateSDK/Disk/System. There, you'll find the .pdx for the stock Launcher - we <i>strongly</i> recommend keeping that file around in case you ever wanna switch back! Just rename it something else.<br><br>Next, drag the Index OS.pdx file into that folder, and rename it to 'Launcher.pdx'. Reset your sim, and you should be up and running on Index!</p>
+        <hr />
+        <h1 class="head">I wanna switch back!</h1>
+        <p class="text">You can switch your default back to stock at any time simply by coming back to this folder, and renaming the .pdx files. Just make sure the one you wanna use is named 'Launcher.pdx'!</p>
+    </div>
+
+    <div class="cta lightblue content">
+        <h1 class="head">On Real Hardware</h1>
+        <p class="warning"><span><i class="fa-solid fa-warning">&nbsp;&nbsp;</i>Wait a sec!</span><br>Installing Index on real hardware requires access to the Playdate's System partition, which is a very involved process that we won't teach how to do here.<br>There are a lot of risks that come alongside installing on real hardware, such as loss of warranty and potential for messing a lot of stuff up, like, really bad.<br>We're not responsible for any damage or loss that may come as a result of installing Index on hardware - so <b>do this at your own risk<i>!!</i></b></p>
+        <p class="text">Here's a list of things you'll need before we begin:<br>• A computer! Any's fine.<br>• An unlocked Playdate console (i.e. one that lets you access the System partition.)<br>• The Index OS .pdx file (<a href="download.html">Get it if you haven't already!</a>)</p>
+        <hr />
+        <h1 class="head">Dropping it in</h1>
+        <p class="text">First, boot your console into System disk mode. If your Playdate's unlocked, you should know how to do this. Next, head into the System folder, located on the root of BERNARD. There, you'll find the .pdx for the stock Launcher - we <i>strongly</i> recommend keeping that file around in case you ever wanna switch back! Just rename it something else.<br><br>Next, drag the Index OS.pdx file into that folder, and rename it to 'Launcher.pdx'. Now eject your console, restart it if necessary, and you should be up and running on Index!</p>
+        <hr />
+        <h1 class="head">I wanna switch back!</h1>
+        <p class="text">You can switch your default back to stock at any time simply by coming back to the System folder, and renaming the .pdx files. Just make sure the one you wanna use is named 'Launcher.pdx'!</p>
     </div>
 
     <div class="footer darkblue content">
-        <a href="index.html"><img class="footer-logo" src="assets/logo-light.svg" /></a>
+        <a href=""><img class="footer-logo" src="assets/logo-light.svg" /></a>
         <a class="footer-icon" href="replace.html"><i class="fa-brands fa-github"></i></a>
         <p class="text"><span>Thanks for using Index OS! ©2023</span><br><br>This launcher was coded and developed by <a href="https://github.com/scratchminer">scratchminer</a>, and the assets and site design were <a href="https://stuffbyrae.neocities.org">made by rae</a>.<br><br>The game featured in the photos, Dungeons & Doggos, was made by PizzaFuel - <a href="replace.html">go check it out!</a><br><br>Special thanks to Guv_Bubbs, and everyone else in the Playdate Squad Discord server who cheered us along during development!<br><br><a href="https://play.date">Playdate</a> is a registered trademark of <a href="https://panic.com">Panic Inc.</a> We aren't affiliated with or endorsed by Panic in any way.</p>
     </div>
