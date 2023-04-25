@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<!-- Defining some stuff -->
+<title>Installation - Index OS</title>
+<link rel="stylesheet" href="assets/style.css">
+<!-- Meta Tags -->
+<meta charset="UTF-8">
+<link rel="icon" href="assets/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#132846" media="(prefers-color-scheme: dark)"/>
+<meta name="theme-color" content="#E8EFFF" media="(prefers-color-scheme: light)"/>
+<meta property="og:title" content="Setup - Index OS">
+<meta property="og:description" content="Introducing Index OS, the world-class custom Launcher app built just for Playdate.">
+<meta property="og:image" content="assets/opengraph.png">
+<meta name="twitter:title" content="Setup - Index OS">
+<meta name="twitter:description" content="Introducing Index OS, the world-class custom Launcher app built just for Playdate.">
+<meta name="twitter:image" content="assets/opengraph.png">
+<!-- Loading in scripts -->
+<script src="assets/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/b793926a64.js" crossorigin="anonymous"></script>
+<!-- Handy dandy Google-fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,600;0,800;1,600;1,800&display=swap" rel="stylesheet">
+
+<body onload="load()">
+    <div class="loading darkblue content">
+        <p class="text"><i class="fa-solid fa-spinner fa-spin"></i>&nbsp;&nbsp;Loading...</p>
+    </div>
+    <div class="header">
+        <a class="nav-btn" onclick="togglenav()"><i class="fa-solid fa-bars-staggered"></i></a>
+        <div class="header-bar">
+            <a href="index"><img class="header-logo" src="assets/logo-dark.svg" /></a>
+            <div class="nav">
+                <div class="nav-items">
+                    <a class="nav-item" href="index#features"><i class="fa-solid fa-bolt"></i>&nbsp;&nbsp;Features</a>
+                    <a class="nav-item" href="faqs"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;FAQs</a>
+                    <a class="nav-item current" href="setup"><i class="fa-solid fa-screwdriver"></i>&nbsp;&nbsp;Setup</a>
+                </div>
+                <a class="nav-item dl" href="download"><i class="fa-solid fa-file-arrow-down">&nbsp;&nbsp;</i>Download Now<i>!!</i></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="b darkblue content">
+        <h1 class="head">Setup</h1>
+        <p class="text">The full guide on how to get Index OS up and running on your Playdate! It's as easy as 1, 2, 3.</p>
+        <p class="warning"><span><i class="fa-solid fa-warning">&nbsp;&nbsp;</i>Wait a sec!</span><br>Just so you know, installing Index OS on real hardware will void your warranty, and has the potential to cause some unwanted bad stuff to happen, as would any custom stuff like this. Please read the entire setup guide carefully <i>before</i> proceeding, and of course...install at your own risk<i>!!</i></b></p>
+    </div>
+
+    <div class="b cta lightblue content" id="installer">
+        <h1 class="head">Installer Setup</h1>
+        <p class="text">Here's a list of things you'll need before we begin:<br>• The Index OS Installer (<a href="download">get it if you haven't already!</a>)<br>• A Playdate system. This installer is meant for real hardware only - please <a href="download">get the Core file instead</a> if you're running a simulator.<br>• Some way to sideload games onto your Playdate! It can be over USB, or through the Playdate sideload page.</p>
+        <hr />
+        <h1 class="head">Set it up!</h1>
+        <p class="text">After you've downloaded the Installer file, sideload the PDX onto your Playdate using your preferred method. (If you don't know how to do this, you probably shouldn't be installing this Launcher...but there's an official guide on Playdate's help page.)<br>Once it's on your device, start it up and follow the on-screen prompts <i>carefully!!</i> After it's all said and done, you'll be prompted to restart your system, and you'll be up and running on Index!</p>
+        <hr />
+        <h1 class="head">I wanna switch back!</h1>
+        <p class="text">You can switch back to the stock Launcher at any time simply by opening the installer on your device again. There, you'll have a prompt to uninstall Index (along with all it's files) - doing that will have you back to the stock Launcher lickety-split.<br>If you want out just for a little bit, there's a button at the bottom of the System folder that will take you back to the stock Launcher for that session. Next time you close a game, you'll be back in Index.</p>
+        <hr />
+        <h1 class="head">Catastrophe!!</h1>
+        <p class="text">Has something gone horribly awry, leaving your system in a total error loop? Fear not, you can recover safely from here! Hold down the A, B, Lock and Menu buttons until your device boots to the Playdate logo. After that, let go of A and B, but <i>keep holding Lock and Menu!!</i> Your device will enter recovery mode, effectively "system updating" your device to entirely-stock OS version 1.11.1.<br>All of your games and save data will be intact, so don't worry!, but do note that you'll have to update your system afterwards to get back to the latest version.</p>
+    </div>
+
+    <div class="cta lightblue content" id="core">
+        <h1 class="head">Core Setup</h1>
+        <p class="text">Here's a list of things you'll need before we begin:<br>• The Index OS Core file (<a href="download">get it if you haven't already!</a>)<br>• A Playdate Simulator. The core file is meant for Simulators only - please <a href="download">get the Installer file instead</a> if you're running on real hardware.</p>
+        <hr />
+        <h1 class="head">Set it up!</h1>
+        <p class="text">With the Index OS file in hand, navigate to path/to/PlaydateSDK/Disk/System. There, you'll find the .pdx for the stock Launcher - we <i>strongly</i> recommend keeping that file around in case you ever wanna switch back! Just rename it something else.<br>Next, drag the Index OS.pdx file into that folder, and rename it to 'Launcher.pdx'. Reset your sim, and you should be up and running on Index!</p>
+        <hr />
+        <h1 class="head">I wanna switch back!</h1>
+        <p class="text">You can switch your default back to stock at any time simply by coming back to this folder, and renaming the .pdx files. Just make sure the one you wanna use is named 'Launcher.pdx'!<br>If you want out just for a little bit, there's a button at the bottom of the System folder that will take you back to the stock Launcher for that session. Next time you close a game, you'll be back in Index.</p>
+    </div>
+
+    <div class="footer darkblue content">
+        <a href="index"><img class="footer-logo" src="assets/logo-light.svg" /></a>
+        <a class="footer-icon" href="https://github.com/scratchminer/Index-OS"><i class="fa-brands fa-github"></i></a>
+        <p class="text"><span>Thanks for using Index OS! ©2023</span><br><br>This launcher was coded and developed by <a href="https://github.com/scratchminer">scratchminer</a>, and the assets and site design were <a href="https://stuffbyrae.neocities.org">made by rae</a>.<br><br>The game featured in the photos, Dungeons & Doggos, was made by PizzaFuel - <a href="https://pizzafuel.itch.io/dungeons-and-doggos">go check it out!</a><br><br>Special thanks to Guv_Bubbs, and everyone else in the Playdate Squad Discord server who cheered us along during development!<br><br><a href="https://play.date">Playdate</a> is a registered trademark of <a href="https://panic.com">Panic Inc.</a> We aren't affiliated with or endorsed by Panic in any way.</p>
+    </div>
+</body>
+</html>

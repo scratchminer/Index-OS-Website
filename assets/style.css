@@ -45,7 +45,7 @@ body {margin: 0; min-height: 100vh; font-family: 'Poppins', sans-serif; font-siz
 .b.content {border-bottom: 15px solid var(--bl2);}
 .r.content {border-bottom: 15px solid var(--re2);}
 
-hr {width: 70vw; border-top: 5px dashed; margin: 30px 0; transform: skewY(-2deg);}
+hr {width: 70vw; border-top: 5px dashed; border-bottom: none; opacity: 0.5; transform: skewY(-1deg);}
 .darkblue hr {width: 70vw; border-top: 5px dashed var(--re4); margin: 30px 0;}
 .lightblue hr {width: 70vw; border-top: 5px dashed var(--bl2); margin: 30px 0;}
 .lightred hr {width: 70vw; border-top: 5px dashed var(--re3); margin: 30px 0;}
@@ -93,7 +93,7 @@ hr {width: 70vw; border-top: 5px dashed; margin: 30px 0; transform: skewY(-2deg)
 /* Call to action box - go download it!! */
 .cta {background: var(--bl5);}
 .cta-head {margin: 0; color: var(--re2); font-size: 2.8em; text-align: center; line-height: 1.2;}
-.cta-button {margin: 30px 0 20px 0; background: var(--bl2); color: var(--bl5); border: 3px solid var(--bl1); box-shadow: 0 5px 0 3px var(--bl1); font-size: 2.2em; padding: 10px 30px; text-align: center; border-radius: 50px; cursor: pointer; transition: all 0.15s cubic-bezier(.05,.69,.32,1.59); text-decoration: none;}
+.cta-button {margin: 20px 0 30px 0; background: var(--bl2); color: var(--bl5); border: 3px solid var(--bl1); box-shadow: 0 5px 0 3px var(--bl1); font-size: 2.2em; padding: 10px 30px; text-align: center; border-radius: 50px; cursor: pointer; transition: all 0.15s cubic-bezier(.05,.69,.32,1.59); text-decoration: none;}
 .cta-button:hover {transform: translateY(-4px); box-shadow: 0 9px 0 2px var(--bl1);}
 .cta-button:active {transform: translateY(7px); box-shadow: 0 -1px 0 3px var(--bl1);}
 .cta-extra {margin: 0; font-size: 1.4em; color: var(--bl2);}
