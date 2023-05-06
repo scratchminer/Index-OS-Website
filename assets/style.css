@@ -59,7 +59,7 @@ hr {width: 70vw; border-top: 5px dashed; border-bottom: none; opacity: 0.5; tran
 .hero .head span {display: inline-block; color: var(--re4); font-size: 1.25em; transform: skewY(-3deg);}
 .features .head {font-size: 2.5em; text-align: center; color: var(--bl2); margin: 0; margin-bottom: 10px; transform: skewY(2deg);}
 .feature .head {grid-column-start: 2; grid-column-end: 2; grid-row-start: 1; grid-row-end: 1; margin: 0; text-align: left; transform: skewY(-3deg); font-size: 2em; white-space: nowrap; text-decoration: underline; color: var(--re2); width: fit-content;}
-.more-features .head {margin-top: 40px;}
+.more-features .head {margin: 40px 40px 0 40px;}
 .cta .head {margin: 0; color: var(--re2); font-size: 2.8em; text-align: center; line-height: 1.2;}
 
 /* Buncha stuff for text */
