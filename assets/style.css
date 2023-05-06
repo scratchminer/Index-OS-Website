@@ -39,6 +39,7 @@ body {margin: 0; min-height: 100vh; font-family: 'Poppins', sans-serif; font-siz
 
 /* Defining some stuff for the 'content' boxes */
 .content {display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px;}
+.al.content {align-items: flex-start;}
 .darkblue.content {background: var(--bl1);}
 .lightblue.content {background: var(--bl5);}
 .lightred.content {background: var(--re5);}
